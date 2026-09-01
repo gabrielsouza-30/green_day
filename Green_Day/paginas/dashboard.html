@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Green Day</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <img src="/img/logo-green-day.png" class="logo">
+
+        <nav class="menu">
+            <a href="/index.html">Home</a>
+            <a href="/paginas/sobre.html">Sobre</a>
+            <a href="/paginas/propriedades.html">Propriedades</a>
+            <a href="/paginas/usuario.html">Usuários</a>
+        </nav>
+
+        <a href="/paginas/login.html" class="login">
+            <i class="fa-regular fa-user"></i>
+            Login
+        </a>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+
+            <div class="hero-title">
+                <h1>
+                    Tecnologia e clima<br>
+                    trabalhando pelo<br>
+                    seu campo.
+                </h1>
+            </div>
+
+            <!-- CARD DO CLIMA -->
+            <div class="weather-card">
+
+                <div class="weather-top">
+                    <div class="weather-icon">☼</div>
+
+                    <div class="temperature">
+                        <strong>26°C</strong>
+                    </div>
+                </div>
+
+                <p class="weather-description">
+                    Parcialmente nublado
+                </p>
+
+                <p class="location">
+                    ◉ Fazenda Vista
+                </p>
+
+                <div class="weather-info">
+
+                    <div>
+                        <span>☁</span>
+                        <small>Umidade</small>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div>
+                        <span>🌧</span>
+                        <small>Chuva</small>
+                        <strong>20%</strong>
+                    </div>
+
+                    <div>
+                        <span>🌡</span>
+                        <small>Sensação</small>
+                        <strong>28°C</strong>
+                    </div>
+
+                </div>
+
+                <div class="weather-update">
+                    Atualizado há 10 min
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+    <main class="container">
+
+        <!-- ALERTA -->
+        <div class="alert">
+
+            <div class="alert-left">
+                <span class="alert-icon">⚠</span>
+
+                <strong>Alerta Ativo</strong>
+
+                <p>
+                    Previsão de chuva moderada para amanhã à tarde.
+                </p>
+            </div>
+
+            <button>Ver detalhes</button>
+
+        </div>
+
+
+        <!-- RESUMO -->
+        <section class="summary">
+
+            <h2>Resumo do dia</h2>
+
+            <div class="cards">
+
+
+                <!-- CARD PREVISÃO -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon">☁</div>
+                        <h3>Previsão</h3>
+                    </div>
+
+                    <p>
+                        Hoje<br>
+                        Nublado com<br>
+                        possibilidade de chuva<br>
+                        à tarde
+                    </p>
+
+                    <a href="#">
+                        Ver previsão completa →
+                    </a>
+
+                </div>
+
+
+                <!-- CARD CONDIÇÕES -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon">🌡</div>
+                        <h3>Condições atuais</h3>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Temperatura</span>
+                        <strong>26°C</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Umidade do ar</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Prob. de chuva</span>
+                        <strong>20%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- CARD IRRIGAÇÃO -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon blue">💧</div>
+                        <h3>Irrigação</h3>
+                    </div>
+
+                    <div class="irrigation-info">
+
+                        <span>Melhor horário</span>
+                        <strong>05:00 - 07:00</strong>
+
+                        <span>Quantidade hoje</span>
+                        <strong>18 mm</strong>
+
+                    </div>
+
+                    <a href="#">
+                        Ver recomendações →
+                    </a>
+
+                </div>
+
+
+                <!-- CARD CULTURA -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="crop-icon">✓</div>
+                        <h3>Cultura principal</h3>
+                    </div>
+
+                    <div class="crop">
+
+                        <strong>Alface</strong>
+
+                        <span>Fase: crescimento</span>
+
+                        <span>Necessidade hídrica</span>
+
+                        <strong>Moderada</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMENDAÇÕES ================= -->
+
+        <section class="recommendations">
+
+            <h2>Recomendações</h2>
+
+            <ul>
+
+                <li>
+                    <span>✓</span>
+                    Irrigue no início da manhã e evite evaporação.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    A previsão indica chuva à tarde. Considere reduzir a irrigação.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Mantenha o solo coberto para conservar umidade.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Acompanhe os alertas climáticos para se prevenir de eventos extremos.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <h2>GREEN</h2>
+                <h2>DAY</h2>
+            </div>
+
+            <hr>
+
+            <div class="footer-content">
+
+                <!-- Frase -->
+                <div class="footer-text">
+                    <p>Green Day – Onde a inovação faz a terra produzir mais.</p>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-right">
+
+                    <div class="telefone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+55 11 99999-9999</span>
+                    </div>
+
+                    <!-- Redes sociais -->
+                    <div class="redes">
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2026 Todos os direitos reservados a Green Day
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
