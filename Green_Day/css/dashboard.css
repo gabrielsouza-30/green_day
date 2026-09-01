@@ -1,0 +1,773 @@
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 68px;
+    background: linear-gradient(90deg, #173500, #315d0b);
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    color: white;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+
+
+.menu {
+    display: flex;
+    gap: 35px;
+    margin-left: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #d8f59a;
+}
+
+.login {
+    margin-left: auto;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    padding: 8px 15px;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #26341b;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 500px;
+
+    background-image: url("/img/dashboard.png");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.10)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1100px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 35px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.hero-title h1 {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+    line-height: 1.05;
+
+    font-weight: bold;
+
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================
+   CARD CLIMA
+========================= */
+
+.weather-card {
+    width: 350px;
+
+    padding: 100px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background: rgba(30, 45, 15, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    backdrop-filter: blur(5px);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.weather-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather-icon {
+  margin-left: 0;   
+  margin-right: 80px; 
+    font-size: 80px;
+   
+}
+
+.temperature strong {
+    margin-left: 0;
+    margin-right: 100px;
+    font-size: 50px;
+}
+
+.weather-description {
+    font-size: 20px;
+    margin-top: 1px;
+}
+
+.location {
+    font-size: 6px;
+    margin-top: 5px;
+}
+
+.weather-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+
+    padding-top: 7px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.weather-info div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1px;
+}
+
+.weather-info span {
+    font-size: 8px;
+}
+
+.weather-info small {
+    font-size: 5px;
+}
+
+.weather-info strong {
+    font-size: 7px;
+}
+
+.weather-update {
+    text-align: center;
+
+    font-size: 5px;
+
+    margin-top: 8px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 35px 35px 40px;
+}
+
+
+/* =========================
+   ALERTA
+========================= */
+
+.alert {
+    width: 100%;
+
+    min-height: 28px;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    background-color: #fff7c7;
+
+    border: 1px solid #e4d86b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 7px;
+
+    margin-bottom: 30px;
+}
+
+.alert-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.alert-icon {
+    color: #d8b900;
+    font-size: 13px;
+}
+
+.alert strong {
+    font-size: 7px;
+}
+
+.alert p {
+    margin-left: 10px;
+    color: #333;
+}
+
+.alert button {
+    border: 1px solid #a4a43e;
+
+    background: transparent;
+
+    border-radius: 5px;
+
+    font-size: 5px;
+
+    padding: 4px 9px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.summary h2 {
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+    color: #30451c;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.info-card {
+    min-height: 125px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 7px;
+
+    padding: 9px;
+
+    background: white;
+}
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 9px;
+}
+
+.card-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    font-size: 10px;
+}
+
+.card-icon.blue {
+    background: #dcecf0;
+}
+
+.crop-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #8dc63f;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+.card-header h3 {
+    font-size: 7px;
+
+    color: #333;
+}
+
+
+/* =========================
+   TEXTO DOS CARDS
+========================= */
+
+.info-card p {
+    font-size: 7px;
+
+    line-height: 1.45;
+
+    color: #444;
+
+    margin-bottom: 8px;
+}
+
+.info-card a {
+    color: #62a538;
+
+    font-size: 6px;
+
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   DADOS
+========================= */
+
+.data-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 6px;
+
+    color: #555;
+}
+
+.data-row strong {
+    color: #333;
+
+    font-size: 6px;
+}
+
+
+/* =========================
+   IRRIGAÇÃO
+========================= */
+
+.irrigation-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin-bottom: 9px;
+}
+
+.irrigation-info span {
+    font-size: 6px;
+
+    color: #555;
+}
+
+.irrigation-info strong {
+    font-size: 7px;
+
+    color: #333;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================
+   CULTURA
+========================= */
+
+.crop {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.crop strong {
+    font-size: 7px;
+
+    color: #333;
+}
+
+.crop span {
+    font-size: 6px;
+
+    color: #555;
+}
+
+
+/* =========================
+   RECOMENDAÇÕES
+========================= */
+
+.recommendations {
+    margin-top: 25px;
+
+    width: 100%;
+
+    max-width: 950px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 12px 15px;
+
+    background-color: #dce8cf;
+
+    border: 1px solid #b8c9a7;
+
+    border-radius: 7px;
+}
+
+.recommendations h2 {
+    font-size: 9px;
+
+    color: #3c5c25;
+
+    margin-bottom: 7px;
+}
+
+.recommendations ul {
+    list-style: none;
+}
+
+.recommendations li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 6px;
+
+    color: #39452f;
+
+    margin-bottom: 4px;
+}
+
+.recommendations li:last-child {
+    margin-bottom: 0;
+}
+
+.recommendations li span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #83bd4e;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 6px;
+
+    font-weight: bold;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #3d1d08;
+    width: 100%;
+    min-height: 270px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 75%;
+    margin: auto;
+    padding-top: 60px;
+    position: relative;
+    min-height: 250px;
+}
+
+/* LOGO */
+
+.logo {
+    line-height: 35px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffffff;
+
+    text-shadow:
+        2px 2px 0 #365004;
+}
+
+.logo h2:last-child {
+    margin-left: 25px;
+}
+
+/* LINHA */
+
+.footer hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+
+    margin-top: 55px;
+}
+
+/* CONTEÚDO */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 20px;
+}
+
+/* FRASE */
+
+.footer-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* CONTATO */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+.telefone i {
+    font-size: 22px;
+}
+
+/* REDES SOCIAIS */
+
+.redes {
+    display: flex;
+    gap: 30px;
+    padding-left: 5px;
+}
+
+.redes a {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #8DA432;
+    transform: translateY(-3px);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    position: absolute;
+    right: -10%;
+    bottom: 5px;
+
+    font-size: 10px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        height: 250px;
+    }
+
+    .hero-content {
+        padding: 20px;
+
+        align-items: flex-start;
+    }
+
+    .hero-title h1 {
+        font-size: 18px;
+    }
+
+    .weather-card {
+        width: 125px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero-content {
+        flex-direction: column;
+
+        justify-content: space-between;
+    }
+
+    .weather-card {
+        align-self: flex-end;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .alert {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .alert-left {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

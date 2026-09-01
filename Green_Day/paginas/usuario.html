@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuários - Green Day</title>
+
+    <link rel="stylesheet" href="/css/usuario.css">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <header>
+
+
+        <nav class="header">
+
+            <img src="/img/logo-green-day.png" class="logo">
+
+            <nav class="menu">
+                <a href="/index.html">Home</a>
+                <a href="/paginas/sobre.html">Sobre</a>
+                <a href="/paginas/propriedades.html">Propriedades</a>
+                <a href="/paginas/usuario.html">Usuários</a>
+            </nav>
+
+            <a href="/paginas/login.html" class="login">
+                <i class="fa-regular fa-user"></i>
+                Login
+            </a>
+
+
+        </nav>
+
+        <!-- Ícones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </header>
+
+    <body>
+
+        <main class="container">
+
+
+            <!-- CABEÇALHO -->
+            <section class="img">
+                <header class="topo">
+
+                    <div class="titulo">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Usuários</span>
+                    </div>
+
+                     <button class="btn-novo">
+                        <i class="fa-solid fa-plus"></i>
+                        Excluir usuário
+                    </button>
+                    
+                    <button class="btn-novo">
+                        <i class="fa-solid fa-plus"></i>
+                        Alterar usuário
+                    </button>
+
+                    <button class="btn-novo">
+                        <i class="fa-solid fa-plus"></i>
+                        Novo usuário
+                    </button>
+                </header>
+            </section>
+
+            <p class="descricao">
+                Gerencie os usuários que têm acesso ao sistema.
+            </p>
+
+
+            <!-- CARDS -->
+            <section class="cards">
+
+                <!-- Usuários ativos -->
+                <div class="card">
+                    <div class="icone verde">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Usuários Ativos</h3>
+                        <strong>6</strong>
+                        <span>Usuários com acesso ativo</span>
+                    </div>
+                </div>
+
+
+                <!-- Usuários inativos -->
+                <div class="card">
+                    <div class="icone vermelho">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Usuários Inativos</h3>
+                        <strong>4</strong>
+                        <span>Usuários com acesso inativo</span>
+                    </div>
+                </div>
+
+
+                <!-- Produtores -->
+                <div class="card">
+                    <div class="icone roxo">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Produtores</h3>
+                        <strong>3</strong>
+                        <span>Acesso a propriedades</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- BUSCA -->
+            <div class="busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar usuário">
+            </div>
+
+
+            <!-- TABELA -->
+            <section class="tabela-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Perfil</th>
+                            <th>Status</th>
+                            <th>Último Acesso</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <span class="avatar">AD</span>
+                                Admin Green Day
+                            </td>
+                            <td>admin@greenday.com.br</td>
+                            <td>
+                                <span class="perfil administrador">
+                                    Administrador
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>25/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">JS</span>
+                                João Silva
+                            </td>
+                            <td>joao.silva@fazendaboavista.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>26/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">MC</span>
+                                Maria Camila
+                            </td>
+                            <td>maria.camila@fazendaboavista.com.br</td>
+                            <td>
+                                <span class="perfil produtor">
+                                    Produtor
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status inativo">● Inativo</span>
+                            </td>
+                            <td>24/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">RF</span>
+                                Rafael Pereira
+                            </td>
+                            <td>rafael.pereira@greenday.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>25/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">AL</span>
+                                Ana Lúcia
+                            </td>
+                            <td>ana.lucia@fazendasoares.com.br</td>
+                            <td>
+                                <span class="perfil produtor">
+                                    Produtor
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>26/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">BB</span>
+                                Bruno Batista
+                            </td>
+                            <td>bruno.batista@campoalto.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>26/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">CF</span>
+                                Carlos Ferreira
+                            </td>
+                            <td>carlos.ferreira@greenday.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>25/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">LM</span>
+                                Lucas Martins
+                            </td>
+                            <td>lucas.martins@agricate.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status inativo">● Inativo</span>
+                            </td>
+                            <td>23/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">BM</span>
+                                Beatriz Monteiro
+                            </td>
+                            <td>beatriz.monteiro@naturalagic.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status inativo">● Inativo</span>
+                            </td>
+                            <td>23/08/2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="avatar">BC</span>
+                                Bruna Carrico
+                            </td>
+                            <td>bruna.carrico@horti.com.br</td>
+                            <td>
+                                <span class="perfil tecnico">
+                                    Técnico
+                                </span>
+                            </td>
+                            <td>
+                                <span class="status ativo">● Ativo</span>
+                            </td>
+                            <td>26/08/2026</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <h2>GREEN</h2>
+                    <h2>DAY</h2>
+                </div>
+
+                <hr>
+
+                <div class="footer-content">
+
+                    <!-- Frase -->
+                    <div class="footer-text">
+                        <p>Green Day – Onde a inovação faz a terra produzir mais.</p>
+                    </div>
+
+                    <!-- Contato -->
+                    <div class="footer-right">
+
+                        <div class="telefone">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+55 11 99999-9999</span>
+                        </div>
+
+                        <!-- Redes sociais -->
+                        <div class="redes">
+
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    © 2026 Todos os direitos reservados a Green Day
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/SEU_CODIGO.js" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
