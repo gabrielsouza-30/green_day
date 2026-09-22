@@ -1,0 +1,407 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f2f0;
+    color: #333;
+}
+
+
+
+/* Importação da fonte Montserrat (opcional, adicione no topo do arquivo CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 120px;
+    background: linear-gradient(90deg, #173500, #315d0b);
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    color: white;
+    /* Define a fonte padrão para todo o header */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Tamanho padronizado */
+    font-weight: 600;
+    font-family: inherit; /* Herda a fonte do header */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d8f59a;
+}
+
+.login {
+    margin-left: auto;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    padding: 8px 16px;
+
+    font-size: 14px; /* Ajustado para igualar ao tamanho dos links do menu */
+    font-weight: 600; /* Mesma espessura da fonte dos links */
+    font-family: inherit; /* Herda a fonte do header */
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d8f59a;
+    border-color: #d8f59a;
+}
+
+/* CONTEÚDO */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: calc(100vh - 175px);
+
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+
+/* TÍTULO */
+
+.pagina-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.pagina-titulo h2 {
+    font-size: 26px;
+    color: #365004;
+    margin-bottom: 8px;
+}
+
+.pagina-titulo p {
+    font-size: 14px;
+    color: #777;
+}
+
+.icone-titulo {
+    font-size: 35px;
+    color: #50791e;
+}
+
+
+/* CARD */
+
+.card-form {
+    max-width: 1000px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px #00000008;
+}
+
+
+/* CABEÇALHO DO CARD */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    color: #365004;
+}
+
+.card-header h3 i {
+    margin-right: 8px;
+}
+
+.tag {
+    background: #e3efd8;
+    color: #50791e;
+
+    padding: 7px 12px;
+    border-radius: 4px;
+
+    font-size: 12px;
+}
+
+
+/* FORMULÁRIO */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background: #fff;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #50791e;
+    box-shadow: 0 0 0 2px #50791e20;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    min-height: 42px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #eee;
+    color: #555;
+}
+
+.btn-salvar {
+    background: #50791e;
+    color: #fff;
+}
+
+.btn-salvar:hover {
+    background: #365004;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #3d1d08;
+    width: 100%;
+    min-height: 270px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 75%;
+    margin: auto;
+    padding-top: 60px;
+    position: relative;
+    min-height: 310px;
+}
+
+/* LOGO */
+
+.logo {
+    line-height: 35px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffffff;
+
+    text-shadow:
+        2px 2px 0 #365004;
+}
+
+.logo h2:last-child {
+    margin-left: 25px;
+}
+
+/* LINHA */
+
+.footer hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+
+    margin-top: 55px;
+}
+
+/* CONTEÚDO */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 20px;
+}
+
+/* FRASE */
+
+.footer-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* CONTATO */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+.telefone i {
+    font-size: 22px;
+}
+
+/* REDES SOCIAIS */
+
+.redes {
+    display: flex;
+    gap: 30px;
+    padding-left: 5px;
+}
+
+.redes a {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #8DA432;
+    transform: translateY(-3px);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    position: absolute;
+    right: -10%;
+    bottom: 5px;
+
+    font-size: 10px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-form {
+        padding: 20px;
+    }
+
+    .botoes {
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+

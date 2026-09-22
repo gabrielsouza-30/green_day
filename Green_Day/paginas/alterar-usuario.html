@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alterar Usuário | Green Day</title>
+
+    <link rel="stylesheet" href="/css/alterar-usuario.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+ <header>
+
+
+        <nav class="header">
+
+            <img src="/img/logo-green-day.png" class="logo">
+
+            <nav class="menu">
+                <a href="/index.html">Home</a>
+                <a href="/paginas/sobre.html">Sobre</a>
+                <a href="/paginas/propriedades.html">Propriedades</a>
+                <a href="/paginas/usuario.html">Usuários</a>
+            </nav>
+
+            <a href="/paginas/login.html" class="login">
+                <i class="fa-regular fa-user"></i>
+                Login
+            </a>
+
+
+        </nav>
+
+        <!-- Ícones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- TÍTULO -->
+        <section class="pagina-titulo">
+
+            <div>
+                <h2>Alterar usuário</h2>
+                <p>Edite as informações do usuário selecionado.</p>
+            </div>
+
+            <i class="fa-solid fa-user-pen icone-titulo"></i>
+
+        </section>
+
+
+        <!-- CARD DE EDIÇÃO -->
+        <section class="card-form">
+
+            <!-- IDENTIFICAÇÃO -->
+            <div class="usuario-selecionado">
+
+                <div class="avatar-grande">JS</div>
+
+                <div class="info-usuario">
+                    <h3>João Silva</h3>
+                    <p>ID do usuário: 002</p>
+                    <span class="status ativo">Ativo</span>
+                </div>
+
+            </div>
+
+
+            <div class="card-header">
+                <h3>
+                    <i class="fa-solid fa-pen"></i>
+                    Dados do usuário
+                </h3>
+
+                <span class="tag">Editando cadastro</span>
+            </div>
+
+<form action="#" method="post"
+    onsubmit="event.preventDefault(); alert('Usuario alterado');">
+
+    <input type="hidden" name="id" value="002">
+
+    <div class="form-grid">
+
+        <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome"
+                value="João Silva" required>
+        </div>
+
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"
+                value="joao@email.com" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone"
+                value="(11) 99999-0000">
+        </div>
+
+        <div class="campo">
+            <label for="perfil">Perfil de acesso</label>
+
+            <select id="perfil" name="perfil">
+                <option>Administrador</option>
+                <option selected>Técnico</option>
+                <option>Produtor</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="senha">Nova senha</label>
+            <input type="password" id="senha" name="senha"
+                placeholder="Deixe em branco para manter">
+        </div>
+
+        <div class="campo">
+            <label for="status">Status do usuário</label>
+
+            <select id="status" name="status">
+                <option value="Ativo" selected>Ativo</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- BOTÕES -->
+    <div class="botoes">
+    <!-- Botão Cancelar -->
+     <a href="usuario.html" class="btn btn-cancelar">
+     <i class="fa-solid fa-arrow-left"></i>
+     Cancelar
+     </a>
+
+        <button type="submit" class="btn btn-salvar">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Salvar alterações
+        </button>
+
+    </div>
+
+</form>
+
+        </section>
+
+    </main>
+
+<!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <h2>GREEN</h2>
+                    <h2>DAY</h2>
+                </div>
+
+                <hr>
+
+                <div class="footer-content">
+
+                    <!-- Frase -->
+                    <div class="footer-text">
+                        <p>Green Day – Onde a inovação faz a terra produzir mais.</p>
+                    </div>
+
+                    <!-- Contato -->
+                    <div class="footer-right">
+
+                        <div class="telefone">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+55 11 99999-9999</span>
+                        </div>
+
+                        <!-- Redes sociais -->
+                        <div class="redes">
+
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    © 2026 Todos os direitos reservados a Green Day
+                </div>
+
+            </div>
+
+        </footer>
+
+</body>
+</html>

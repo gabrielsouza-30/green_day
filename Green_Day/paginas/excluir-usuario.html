@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Excluir Usuário | Green Day</title>
+
+    <link rel="stylesheet" href="/css/excluir-usuario.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <header>
+
+
+        <nav class="header">
+
+            <img src="/img/logo-green-day.png" class="logo">
+
+            <nav class="menu">
+                <a href="/index.html">Home</a>
+                <a href="/paginas/sobre.html">Sobre</a>
+                <a href="/paginas/propriedades.html">Propriedades</a>
+                <a href="/paginas/usuario.html">Usuários</a>
+            </nav>
+
+            <a href="/paginas/login.html" class="login">
+                <i class="fa-regular fa-user"></i>
+                Login
+            </a>
+
+
+        </nav>
+
+        <!-- Ícones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </header>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- TÍTULO -->
+        <section class="pagina-titulo">
+
+            <div>
+                <h2>Excluir usuário</h2>
+                <p>Gerencie a exclusão de usuários do sistema.</p>
+            </div>
+
+            <i class="fa-solid fa-user-minus icone-titulo"></i>
+
+        </section>
+
+
+        <!-- CARD DE EXCLUSÃO -->
+        <section class="card-excluir">
+
+            <!-- ALERTA -->
+            <div class="alerta">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <div>
+                    <h3>Atenção!</h3>
+
+                    <p>
+                        Você está prestes a excluir este usuário.
+                        Confira os dados antes de continuar.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- DADOS DO USUÁRIO -->
+            <div class="dados-exclusao">
+
+                <div class="avatar-grande">JS</div>
+
+                <div class="info-usuario">
+
+                    <h3>João Silva</h3>
+
+                    <p>joao@email.com</p>
+
+                    <span class="perfil tecnico">Técnico</span>
+
+                </div>
+
+                <span class="status ativo">Ativo</span>
+
+            </div>
+
+
+            <!-- MENSAGEM -->
+            <div class="mensagem-excluir">
+
+                <h3>Confirmar exclusão</h3>
+
+                <p>
+                    Tem certeza de que deseja excluir este usuário?
+                </p>
+
+                <small>
+                    Essa ação removerá o cadastro do usuário.
+                    Confirme somente se realmente deseja prosseguir.
+                </small>
+
+            </div>
+
+
+            <!-- BOTÕES -->
+            <div class="botoes">
+
+                <!-- Botão Cancelar -->
+                <a href="usuario.html" class="btn btn-cancelar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Cancelar
+                </a>
+
+                <!-- Botão Excluir -->
+                <button type="button" class="btn btn-excluir" onclick="excluirUsuario()">
+
+                    <i class="fa-solid fa-trash"></i>
+                    Excluir usuário
+
+                </button>
+
+            </div>
+
+            <script>
+                function excluirUsuario() {
+
+                    if (confirm('Deseja realmente excluir este usuário?')) {
+
+                        alert('Usuário excluído com sucesso!');
+
+                        // Permanece na tela de exclusão
+                        // Não redireciona e não envia formulário
+
+                    }
+
+                }
+            </script>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <h2>GREEN</h2>
+                <h2>DAY</h2>
+            </div>
+
+            <hr>
+
+            <div class="footer-content">
+
+                <!-- Frase -->
+                <div class="footer-text">
+                    <p>Green Day – Onde a inovação faz a terra produzir mais.</p>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-right">
+
+                    <div class="telefone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+55 11 99999-9999</span>
+                    </div>
+
+                    <!-- Redes sociais -->
+                    <div class="redes">
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2026 Todos os direitos reservados a Green Day
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

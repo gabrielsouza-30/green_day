@@ -1,0 +1,460 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f2f0;
+    color: #333;
+}
+
+
+/* Importação da fonte Montserrat (opcional, adicione no topo do arquivo CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 120px;
+    background: linear-gradient(90deg, #173500, #315d0b);
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    color: white;
+    /* Define a fonte padrão para todo o header */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Tamanho padronizado */
+    font-weight: 600;
+    font-family: inherit; /* Herda a fonte do header */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d8f59a;
+}
+
+.login {
+    margin-left: auto;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    padding: 8px 16px;
+
+    font-size: 14px; /* Ajustado para igualar ao tamanho dos links do menu */
+    font-weight: 600; /* Mesma espessura da fonte dos links */
+    font-family: inherit; /* Herda a fonte do header */
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d8f59a;
+    border-color: #d8f59a;
+}
+/* CONTEÚDO */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: calc(100vh - 175px);
+
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+
+/* TÍTULO */
+
+.pagina-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.pagina-titulo h2 {
+    font-size: 26px;
+    color: #365004;
+    margin-bottom: 8px;
+}
+
+.pagina-titulo p {
+    font-size: 14px;
+    color: #777;
+}
+
+.icone-titulo {
+    font-size: 35px;
+    color: #50791e;
+}
+
+
+/* CARD DE EXCLUSÃO */
+
+.card-excluir {
+    max-width: 750px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px #00000008;
+}
+
+
+/* ALERTA */
+
+.alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 18px;
+    margin-bottom: 25px;
+
+    background: #fff1f1;
+    border: 1px solid #f2caca;
+    border-radius: 6px;
+}
+
+.alerta i {
+    font-size: 23px;
+    color: #c83232;
+}
+
+.alerta h3 {
+    font-size: 16px;
+    color: #b42323;
+    margin-bottom: 7px;
+}
+
+.alerta p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #8b3030;
+}
+
+
+/* DADOS DO USUÁRIO */
+
+.dados-exclusao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+    margin-bottom: 25px;
+
+    background: #f7f9f4;
+    border: 1px solid #e0e6d8;
+    border-radius: 6px;
+}
+
+.avatar-grande {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #86a62c;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+.info-usuario {
+    flex: 1;
+}
+
+.info-usuario h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-usuario p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+
+/* PERFIL E STATUS */
+
+.perfil,
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.perfil.tecnico {
+    background: #cceaff;
+    color: #176187;
+}
+
+.status.ativo {
+    background: #d8f5d1;
+    color: #318b29;
+}
+
+
+/* MENSAGEM */
+
+.mensagem-excluir {
+    line-height: 1.7;
+}
+
+.mensagem-excluir h3 {
+    font-size: 17px;
+    color: #365004;
+    margin-bottom: 12px;
+}
+
+.mensagem-excluir p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.mensagem-excluir small {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    min-height: 42px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #eee;
+    color: #555;
+}
+
+.btn-excluir {
+    background: #c83232;
+    color: #fff;
+}
+
+.btn-excluir:hover {
+    background: #a51f1f;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #3d1d08;
+    width: 100%;
+    min-height: 270px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 75%;
+    margin: auto;
+    padding-top: 60px;
+    position: relative;
+    min-height: 310px;
+}
+
+/* LOGO */
+
+.logo {
+    line-height: 35px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffffff;
+
+    text-shadow:
+        2px 2px 0 #365004;
+}
+
+.logo h2:last-child {
+    margin-left: 25px;
+}
+
+/* LINHA */
+
+.footer hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+
+    margin-top: 55px;
+}
+
+/* CONTEÚDO */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 20px;
+}
+
+/* FRASE */
+
+.footer-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* CONTATO */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+.telefone i {
+    font-size: 22px;
+}
+
+/* REDES SOCIAIS */
+
+.redes {
+    display: flex;
+    gap: 30px;
+    padding-left: 5px;
+}
+
+.redes a {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #8DA432;
+    transform: translateY(-3px);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    position: absolute;
+    right: -10%;
+    bottom: 5px;
+
+    font-size: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .card-excluir {
+        padding: 20px;
+    }
+
+    .botoes {
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .dados-exclusao {
+        flex-wrap: wrap;
+    }
+}
