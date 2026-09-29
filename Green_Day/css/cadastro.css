@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7C9256;
+}
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina-cadastro {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.lado-esquerdo {
+    width: 48.5%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(25, 45, 20, 0.45),
+            rgba(25, 45, 20, 0.45)
+        ),
+        url("../img/fundo-cadastro.png");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    color: #ffffff;
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 27px;
+    left: 22px;
+
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 11px;
+
+    color: #eeeeee;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+/* Conteúdo */
+
+.conteudo-esquerdo {
+    position: absolute;
+
+    left: 57px;
+    top: 31%;
+
+    width: 430px;
+}
+
+.conteudo-esquerdo h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    color: #eeeeee;
+}
+
+.conteudo-esquerdo h1 span {
+    color: #9BC51D;
+}
+
+.linha {
+    width: 60px;
+    height: 4px;
+
+    background-color: #B2D52D;
+
+    margin-top: 17px;
+    margin-bottom: 27px;
+}
+
+.conteudo-esquerdo p {
+    font-size: 12px;
+    line-height: 1.35;
+
+    color: #eeeeee;
+}
+
+/* Recursos */
+
+.recursos {
+    width: 350px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 34px;
+}
+
+.recurso {
+    width: 100px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.recurso .icone {
+    height: 30px;
+
+    font-size: 29px;
+    line-height: 30px;
+
+    color: #9BC51D;
+
+    margin-bottom: 7px;
+}
+
+.recurso span {
+    display: block;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.lado-direito {
+    width: 51.5%;
+    min-height: 100vh;
+
+    background-color: #7C9256;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa do formulário */
+
+.formulario {
+    width: 347px;
+    min-height: 477px;
+
+    background-color: #E9EDE4;
+
+    border-radius: 10px;
+
+    padding: 48px 26px 30px;
+}
+
+/* Título */
+
+.formulario h2 {
+    color: #365004;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.subtitulo {
+    color: #111111;
+
+    font-size: 11px;
+
+    margin-bottom: 26px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+form {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    height: 35px;
+
+    display: block;
+
+    margin-bottom: 19px;
+
+    padding: 0 9px;
+
+    border: 1px solid #8DA432;
+    border-radius: 5px;
+
+    background-color: #E1E1E1;
+
+    outline: none;
+
+    font-size: 11px;
+
+    color: #333333;
+}
+
+form input::placeholder {
+    color: #777777;
+}
+
+form input:focus {
+    border-color: #365004;
+    background-color: #eeeeee;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+form button {
+    width: 135px;
+    height: 27px;
+
+    display: block;
+
+    margin: 26px auto 0;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #365004;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-style: italic;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    background-color: #2b4003;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login {
+    text-align: center;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+    font-style: italic;
+
+    color: #111111;
+}
+
+.login a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .pagina-cadastro {
+        flex-direction: column;
+    }
+
+    .lado-esquerdo {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .lado-direito {
+        width: 100%;
+        min-height: 600px;
+        padding: 40px 20px;
+    }
+
+    .conteudo-esquerdo {
+        left: 40px;
+        top: 25%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .conteudo-esquerdo {
+        left: 25px;
+        width: calc(100% - 50px);
+    }
+
+    .conteudo-esquerdo h1 {
+        font-size: 21px;
+    }
+
+    .recursos {
+        width: 100%;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 347px;
+    }
+}

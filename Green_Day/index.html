@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Green Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</head>
+<!-- CSS -->
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <img src="/img/logo-green-day.png" class="logo">
+
+        <nav class="menu">
+            <a href="/index.html">Home</a>
+            <a href="/paginas/sobre.html">Sobre</a>
+            <a href="/paginas/propriedades.html">Propriedades</a>
+            <a href="/paginas/usuario.html">Usuários</a>
+            <a href="/paginas/solucoes.html">Soluções</a>
+        </nav>
+
+        <a href="/paginas/login.html" class="login">
+            <i class="fa-regular fa-user"></i>
+            Login
+        </a>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+
+            <div class="hero-title">
+                <h1>
+                    Tecnologia e clima<br>
+                    trabalhando pelo<br>
+                    seu campo.
+                </h1>
+            </div>
+
+            <!-- CARD DO CLIMA -->
+            <div class="weather-card">
+
+                <div class="weather-top">
+                    <div class="weather-icon">☼</div>
+
+                    <div class="temperature">
+                        <strong>26°C</strong>
+                    </div>
+                </div>
+
+                <p class="weather-description">
+                    Parcialmente nublado
+                </p>
+
+                <p class="location">
+                    ◉ Fazenda Vista
+                </p>
+
+                <div class="weather-info">
+
+                    <div>
+                        <span>☁</span>
+                        <small>Umidade</small>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div>
+                        <span>🌧</span>
+                        <small>Chuva</small>
+                        <strong>20%</strong>
+                    </div>
+
+                    <div>
+                        <span>🌡</span>
+                        <small>Sensação</small>
+                        <strong>28°C</strong>
+                    </div>
+
+                </div>
+
+                <div class="weather-update">
+                    Atualizado há 10 min
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+    <main class="container">
+
+        <!-- ALERTA -->
+        <div class="alert">
+
+            <div class="alert-left">
+                <span class="alert-icon">⚠</span>
+
+                <b>Alerta Ativo</b>
+
+                <p>
+                    Previsão de chuva moderada para amanhã à tarde.
+                </p>
+            </div>
+
+            <button class="btn-destaques" onclick="abrirDestaque()">Ver detalhes</button>
+
+        </div>
+
+
+        <!-- RESUMO -->
+        <section class="summary">
+
+            <h2>Resumo do dia</h2>
+
+            <div class="cards">
+
+
+                <!-- CARD PREVISÃO -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon">☁</div>
+                        <h3>Previsão</h3>
+                    </div>
+
+                    <p>
+                        Hoje<br>
+                        Nublado com<br>
+                        possibilidade de chuva<br>
+                        à tarde
+                    </p>
+
+                    <a href="javascript:void(0)" onclick="abrirPrevisao()">
+                        Ver previsão completa →
+                    </a>
+
+                </div>
+
+
+                <!-- CARD CONDIÇÕES -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon">🌡</div>
+                        <h3>Condições atuais</h3>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Temperatura</span>
+                        <strong>26°C</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Umidade do ar</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Prob. de chuva</span>
+                        <strong>20%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- CARD IRRIGAÇÃO -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="card-icon blue">💧</div>
+                        <h3>Irrigação</h3>
+                    </div>
+
+                    <div class="irrigation-info">
+
+                        <span>Melhor horário</span>
+                        <strong>05:00 - 07:00</strong>
+
+                        <span>Quantidade hoje</span>
+                        <strong>18 mm</strong>
+
+                    </div>
+
+                    <a href="#" id="btnIrrigacao">
+                        Ver recomendações →
+                    </a>
+
+                </div>
+
+
+                <!-- CARD CULTURA -->
+                <div class="info-card">
+
+                    <div class="card-header">
+                        <div class="crop-icon">✓</div>
+                        <h3>Cultura principal</h3>
+                    </div>
+
+                    <div class="crop">
+
+                        <strong>Alface</strong>
+
+                        <span>Fase: crescimento</span>
+
+                        <span>Necessidade hídrica</span>
+
+                        <strong>Moderada</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMENDAÇÕES ================= -->
+
+        <section class="recommendations">
+
+            <h2>Recomendações</h2>
+
+            <ul>
+
+                <li>
+                    <span>✓</span>
+                    Irrigue no início da manhã e evite evaporação.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    A previsão indica chuva à tarde. Considere reduzir a irrigação.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Mantenha o solo coberto para conservar umidade.
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Acompanhe os alertas climáticos para se prevenir de eventos extremos.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <h2>GREEN</h2>
+                <h2>DAY</h2>
+            </div>
+
+            <hr>
+
+            <div class="footer-content">
+
+                <!-- Frase -->
+                <div class="footer-text">
+                    <p>Green Day – Onde a inovação faz a terra produzir mais.</p>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-right">
+
+                    <div class="telefone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+55 11 99999-9999</span>
+                    </div>
+
+                    <!-- Redes sociais -->
+                    <div class="redes">
+
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://x.com/">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="https://web.whatsapp.com/">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2026 Todos os direitos reservados a Green Day
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div id="modalDestaque" class="modal-overlay">
+
+        <div class="modal-chuva">
+
+            <div class="modal-topo">
+                <h2>Previsão de chuva</h2>
+
+                <button class="fechar" onclick="fecharDestaque()">
+                    ×
+                </button>
+            </div>
+
+            <div class="modal-conteudo">
+
+                <p><strong>Previsão:</strong> Amanhã</p>
+                <p><strong>Condição:</strong> Chuva moderada</p>
+                <p><strong>Probabilidade:</strong> 75%</p>
+                <p><strong>Precipitação:</strong> 18 mm</p>
+
+                <h3>🌧️ Condições climáticas</h3>
+
+                <p>
+                    Há previsão de chuva moderada durante a tarde,
+                    podendo afetar as atividades no campo.
+                </p>
+
+                <h3>💡 Recomendação</h3>
+
+                <div class="recomendacao">
+                    Evite realizar a irrigação antes da chuva prevista.
+                    Monitore as condições climáticas para ajustar
+                    as atividades no campo.
+                </div>
+
+            </div>
+
+            <div class="modal-rodape">
+
+                <button class="btn-fechar" onclick="fecharDestaque()">
+                    Fechar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT DO MODAL -->
+    <script>
+
+        function abrirDestaque() {
+            document.getElementById("modalDestaque").style.display = "flex";
+        }
+
+        function fecharDestaque() {
+            document.getElementById("modalDestaque").style.display = "none";
+        }
+
+    </script>
+
+    <!-- JANELA DE PREVISÃO -->
+    <div id="modalPrevisao" class="modal-previsao">
+
+        <div class="conteudo-previsao">
+
+            <!-- Cabeçalho -->
+            <div class="cabecalho-previsao">
+
+                <div>
+                    <span class="titulo">Previsão</span>
+                    <h2>Condições climáticas</h2>
+                </div>
+
+                <button class="fechar" onclick="fecharPrevisao()">
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- HOJE -->
+            <div class="previsao-hoje">
+
+                <div class="dia-topo">
+                    <div>
+                        <span>Hoje</span>
+                        <h3>Nublado com possibilidade de chuva à tarde</h3>
+                    </div>
+
+                    <span class="icone-tempo">☁️</span>
+                </div>
+
+                <div class="temperatura">
+                    <strong>24°C</strong>
+
+                    <div>
+                        <span>Máx. 27°C</span>
+                        <span>Mín. 18°C</span>
+                    </div>
+                </div>
+
+
+                <!-- DADOS -->
+                <div class="dados-tempo">
+
+                    <div>
+                        <span>🌧️</span>
+                        <small>Chuva</small>
+                        <strong>65%</strong>
+                    </div>
+
+                    <div>
+                        <span>💧</span>
+                        <small>Umidade</small>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div>
+                        <span>💨</span>
+                        <small>Vento</small>
+                        <strong>14 km/h</strong>
+                    </div>
+
+                    <div>
+                        <span>🌧️</span>
+                        <small>Precipitação</small>
+                        <strong>8 mm</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREVISÃO POR HORÁRIO -->
+            <section class="bloco">
+
+                <h3>Previsão de hoje</h3>
+
+                <div class="horarios">
+
+                    <div>
+                        <span>09h</span>
+                        <b>☁️</b>
+                        <strong>21°</strong>
+                        <small>10%</small>
+                    </div>
+
+                    <div>
+                        <span>12h</span>
+                        <b>☁️</b>
+                        <strong>24°</strong>
+                        <small>30%</small>
+                    </div>
+
+                    <div>
+                        <span>15h</span>
+                        <b>🌧️</b>
+                        <strong>25°</strong>
+                        <small>65%</small>
+                    </div>
+
+                    <div>
+                        <span>18h</span>
+                        <b>🌧️</b>
+                        <strong>22°</strong>
+                        <small>70%</small>
+                    </div>
+
+                    <div>
+                        <span>21h</span>
+                        <b>☁️</b>
+                        <strong>20°</strong>
+                        <small>35%</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- AMANHÃ -->
+            <section class="bloco">
+
+                <h3>Amanhã</h3>
+
+                <div class="amanha">
+
+                    <div>
+                        <strong>Quarta-feira</strong>
+                        <small>30 de Setembro</small>
+                    </div>
+
+                    <span>🌧️</span>
+
+                    <div>
+                        <strong>25°</strong>
+                        <small>17°</small>
+                    </div>
+
+                    <div class="chance">
+                        🌧️ 75%
+                    </div>
+
+                </div>
+
+                <p class="descricao">
+                    Chuva moderada durante a tarde, com possibilidade
+                    de pancadas no início da noite.
+                </p>
+
+            </section>
+
+
+            <!-- PRÓXIMOS DIAS -->
+            <section class="bloco">
+
+                <h3>Próximos dias</h3>
+
+                <div class="lista-dias">
+
+                    <div class="dia">
+                        <div>
+                            <strong>Quinta-feira</strong>
+                            <small>01 de Outubro</small>
+                        </div>
+
+                        <span>🌦️</span>
+
+                        <strong>26° / 18°</strong>
+
+                        <small>45%</small>
+                    </div>
+
+
+                    <div class="dia">
+                        <div>
+                            <strong>Sexta-feira</strong>
+                            <small>02 de Outubro</small>
+                        </div>
+
+                        <span>☀️</span>
+
+                        <strong>28° / 19°</strong>
+
+                        <small>20%</small>
+                    </div>
+
+
+                    <div class="dia">
+                        <div>
+                            <strong>Sábado</strong>
+                            <small>03 de Outubro</small>
+                        </div>
+
+                        <span>🌤️</span>
+
+                        <strong>27° / 18°</strong>
+
+                        <small>30%</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECOMENDAÇÃO -->
+            <div class="recomendacao">
+
+                <span>💡</span>
+
+                <div>
+                    <strong>Recomendação</strong>
+
+                    <p>
+                        Devido à possibilidade de chuva amanhã,
+                        acompanhe as condições climáticas antes
+                        de realizar atividades de irrigação.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function abrirDestaque() {
+            document.getElementById("modalDestaque").style.display = "flex";
+        }
+
+        function fecharDestaque() {
+            document.getElementById("modalDestaque").style.display = "none";
+        }
+
+
+        function abrirPrevisao() {
+            const modal = document.getElementById("modalPrevisao");
+
+            if (modal) {
+                modal.classList.add("ativo");
+            }
+        }
+
+        function fecharPrevisao() {
+            const modal = document.getElementById("modalPrevisao");
+
+            if (modal) {
+                modal.classList.remove("ativo");
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const botaoPrevisao = document.getElementById("btnPrevisao");
+            const modalPrevisao = document.getElementById("modalPrevisao");
+
+            if (botaoPrevisao) {
+                botaoPrevisao.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    abrirPrevisao();
+                });
+            }
+
+            if (modalPrevisao) {
+                modalPrevisao.addEventListener("click", function (event) {
+
+                    if (event.target === modalPrevisao) {
+                        fecharPrevisao();
+                    }
+
+                });
+            }
+
+        });
+    </script>
+    <!-- MODAL DE IRRIGAÇÃO -->
+<div id="modalIrrigacao" class="modal-irrigacao">
+
+    <div class="conteudo-irrigacao">
+
+        <div class="cabecalho-irrigacao">
+            <div>
+                <span class="titulo">Irrigação</span>
+                <h2>Recomendações de irrigação</h2>
+            </div>
+
+            <button class="fechar" onclick="fecharIrrigacao()">×</button>
+        </div>
+
+        <div class="resumo-irrigacao">
+
+            <div class="icone-irrigacao">
+                💧
+            </div>
+
+            <div>
+                <span>Recomendação para hoje</span>
+                <h3>Irrigar no início da manhã</h3>
+            </div>
+
+        </div>
+
+        <section class="bloco-irrigacao">
+
+            <h3>💧 Melhor horário</h3>
+
+            <div class="horario-irrigacao">
+                <strong>05:00 - 07:00</strong>
+                <span>Período recomendado para realizar a irrigação.</span>
+            </div>
+
+        </section>
+
+        <section class="bloco-irrigacao">
+
+            <h3>🌧️ Condições climáticas</h3>
+
+            <div class="dados-irrigacao">
+
+                <div>
+                    <small>Precipitação prevista</small>
+                    <strong>8 mm</strong>
+                </div>
+
+                <div>
+                    <small>Umidade</small>
+                    <strong>78%</strong>
+                </div>
+
+                <div>
+                    <small>Chuva</small>
+                    <strong>65%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bloco-irrigacao">
+
+            <h3>💦 Quantidade recomendada</h3>
+
+            <div class="quantidade-irrigacao">
+                <strong>18 mm</strong>
+                <span>Quantidade recomendada para hoje</span>
+            </div>
+
+            <p>
+                Como existe possibilidade de chuva durante a tarde,
+                recomenda-se realizar a irrigação no início da manhã
+                e acompanhar as condições climáticas ao longo do dia.
+            </p>
+
+        </section>
+
+        <div class="alerta-irrigacao">
+            <span>💡</span>
+
+            <div>
+                <strong>Recomendação</strong>
+
+                <p>
+                    Priorize a irrigação entre 05:00 e 07:00.
+                    Evite irrigar próximo aos períodos de chuva
+                    para não desperdiçar água.
+                </p>
+            </div>
+        </div>
+
+        <div class="rodape-irrigacao">
+            <button onclick="fecharIrrigacao()">
+                Fechar
+            </button>
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+function abrirIrrigacao() {
+    const modal = document.getElementById("modalIrrigacao");
+
+    if (modal) {
+        modal.classList.add("ativo");
+    }
+}
+
+function fecharIrrigacao() {
+    const modal = document.getElementById("modalIrrigacao");
+
+    if (modal) {
+        modal.classList.remove("ativo");
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnIrrigacao = document.getElementById("btnIrrigacao");
+    const modalIrrigacao = document.getElementById("modalIrrigacao");
+
+    if (btnIrrigacao) {
+
+        btnIrrigacao.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            abrirIrrigacao();
+
+        });
+
+    }
+
+    if (modalIrrigacao) {
+
+        modalIrrigacao.addEventListener("click", function (event) {
+
+            if (event.target === modalIrrigacao) {
+
+                fecharIrrigacao();
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>

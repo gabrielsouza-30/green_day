@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body, html {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===================================================
+   LADO ESQUERDO (HERO / IMAGEM)
+   =================================================== */
+.left-section {
+    flex: 1;
+    position: relative;
+    background-image: url('/img/esqueci-senha.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+
+.left-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin: auto 0;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    max-width: 520px;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: #c5f015; /* Verde neon */
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    max-width: 460px;
+    color: #e0e0e0;
+}
+
+.features {
+    display: flex;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 110px;
+}
+
+.feature-item i {
+    font-size: 2rem;
+    color: #c5f015;
+    margin-bottom: 10px;
+}
+
+.feature-item span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ===================================================
+   LADO DIREITO (CARD E FORMULÁRIO PADRONIZADOS)
+   =================================================== */
+.right-section {
+    flex: 1;
+    background-color: #6d8050; /* Verde oliva da lateral */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+/* Card padronizado conforme imagem de referência */
+.form-card, .card, .retangulo {
+    background-color: #e3e8dc; /* Fundo off-white esverdeado */
+    width: 100%;
+    max-width: 480px;
+    padding: 55px 45px 50px 45px;
+    border-radius: 28px; /* Cantos arredondados padronizados */
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.form-card h2, .card h1, .retangulo h2 {
+    color: #2b4511;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    align-self: flex-start;
+}
+
+.subtitle {
+    color: #4a5440;
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+form label, .form-group label {
+    display: block;
+    color: #2b4511;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+form input, .input-wrapper input {
+    width: 100%;
+    padding: 14px 45px 14px 14px;
+    background-color: #d4dad0;
+    border: 1px solid #8a9480;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #2b4511;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 0;
+}
+
+form input:focus, .input-wrapper input:focus {
+    border-color: #2b4511;
+    background-color: #e3e8dc;
+}
+
+form input::placeholder, .input-wrapper input::placeholder {
+    color: #8c9485;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b4511;
+}
+
+/* Botão em formato Pill */
+.btn-submit, .submit-btn {
+    background-color: #334e00;
+    color: #ffffff;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover, .submit-btn:hover {
+    background-color: #243a00;
+}
+
+.link {
+    display: block;
+    color: #334e00;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+/* ===================================================
+   RESPONSIVIDADE (TABLET / MOBILE)
+   =================================================== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding: 30px 20px;
+        min-height: 240px;
+    }
+
+    .features {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .right-section {
+        padding: 30px 16px;
+    }
+
+    .form-card, .card, .retangulo {
+        padding: 35px 22px;
+        border-radius: 22px;
+    }
+
+    .form-card h2, .card h1, .retangulo h2 {
+        font-size: 1.7rem;
+    }
+}

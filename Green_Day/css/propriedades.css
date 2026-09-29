@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/img/propriedade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 120px;
+    background: linear-gradient(90deg, #173500, #315d0b);
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    color: white;
+    /* Define a fonte padrão para todo o header */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Tamanho padronizado */
+    font-weight: 600;
+    font-family: inherit; /* Herda a fonte do header */
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d8f59a;
+}
+
+.login {
+    margin-left: auto;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    padding: 8px 16px;
+
+    font-size: 14px; /* Ajustado para igualar ao tamanho dos links do menu */
+    font-weight: 600; /* Mesma espessura da fonte dos links */
+    font-family: inherit; /* Herda a fonte do header */
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d8f59a;
+    border-color: #d8f59a;
+}
+
+/* ================================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+.overlay {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* Barra de Busca */
+.search-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #c2cfb5;
+    outline: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #555;
+    width: 100%;
+}
+
+.search-container button {
+    background-color: #3b5714;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.search-container button:hover {
+    background-color: #2d430f;
+}
+
+/* Tabela Principal */
+.table-card {
+    background-color: rgba(224, 238, 198, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.2fr 1fr 1fr;
+    font-weight: 700;
+    font-size: 16px;
+    color: #6b8236;
+    padding: 0 10px 10px 10px;
+    text-align: left;
+    gap: 10px;
+}
+
+.table-row {
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.2fr 1fr 1fr;
+    align-items: center;
+    padding: 14px 10px;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+}
+
+.table-row > div:not(:last-child) {
+    border-right: 1px solid #e2e2e2;
+    padding-right: 10px;
+}
+
+.table-row > div:not(:first-child) {
+    padding-left: 5px;
+}
+
+/* Botões de Ação */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.actions button:hover {
+    opacity: 0.85;
+}
+
+.btn-edit { background-color: #7aa130; }
+.btn-delete { background-color: #e61c1c; }
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #3d1d08;
+    width: 100%;
+    color: white;
+    padding: 40px 0 20px 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #365004;
+    line-height: 1.1;
+}
+
+.footer-logo h2:last-child {
+    margin-left: 15px;
+}
+
+.footer hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-text p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.telefone i {
+    font-size: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+}
+
+.redes a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #8DA432;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 11px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+}
+
+/* ================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+================================ */
+
+/* Tablets e Celulares Maiores */
+@media (max-width: 850px) {
+    /* ==========================================
+   1. HEADER - CABEÇALHO
+========================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+        height: auto;
+        padding: 15px 4%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .menu {
+        margin-left: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .login {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+}
+
+    /* Esconde o cabeçalho da tabela tradicional em telas menores */
+    .table-header {
+        display: none;
+    }
+
+    /* Transforma cada linha da tabela em um card individual */
+    .table-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .table-row > div:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 6px;
+        width: 100%;
+    }
+
+    .table-row > div:not(:first-child) {
+        padding-left: 0;
+    }
+
+    .actions {
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+}
+
+/* Dispositivos Móveis (Celulares Pequenos) */
+@media (max-width: 550px) {
+   /* ==========================================
+   1. HEADER - CABEÇALHO
+========================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+        height: auto;
+        padding: 15px 4%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .menu {
+        margin-left: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .login {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+}
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .login {
+        margin-left: 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+}
